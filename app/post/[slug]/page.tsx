@@ -3,6 +3,7 @@ import { getBlogPost } from '@/app/_actions/getBlogPost';
 import Comments from '../components/coments';
 import { logger } from '@/logger';
 
+/* Post page with SSG */
 const Post = async ({ params: { slug } }: { params: { slug: string } }) => {
   logger.info('Post page called ');
 

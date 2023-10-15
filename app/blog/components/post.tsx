@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import DeletionPost from '@/app/blog/components/deletion';
 
+/* Post in list component */
+
 const Post = ({ title, body, id }: BlogPost) => (
   <div className="flex flex-col w-[600px] mb-5 text-gray-600 bg-gray-300 p-4 rounded-2xl">
     <Link href={`/post/${id}`}>

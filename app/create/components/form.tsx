@@ -3,6 +3,10 @@
 import { useRef } from 'react';
 import { createFormPost } from '@/app/_actions/createBlogPost';
 
+/* Client form component for post creation
+ * onSubmit we use server action createFormPost
+ * createFormPost create new post and revalidating blog page */
+
 const Form = () => {
   const ref = useRef<HTMLFormElement | null>(null);
 

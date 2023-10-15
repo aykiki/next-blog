@@ -1,6 +1,7 @@
 'use client';
 
 import { deleteBlogPost } from '@/app/_actions/deleteBlogPost';
+/* Client button with server action to delete post */
 
 const DeletionPost = ({ postId }: { postId: string }) => {
   const handleClick = async () => {
