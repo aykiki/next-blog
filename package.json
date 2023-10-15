@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@rc-foundation/eslint-config-rc": "^0.0.25",
+    "lottie-react": "^2.4.0",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",

@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { createFormPost } from '@/app/(actions)/createBlogPost';
+import { createFormPost } from '@/app/_actions/createBlogPost';
 
 const Form = () => {
   const ref = useRef<HTMLFormElement | null>(null);
@@ -19,16 +19,21 @@ const Form = () => {
   };
 
   return (
-    <form ref={ref} action={onSubmit}>
-      <label>
-        <span>Title</span>
-        <input type="text" />
+    <form ref={ref} action={onSubmit} className="flex flex-col gap-6 w-[600px]">
+      <label className="flex flex-col">
+        <span className="text-gray-600">Title</span>
+        <input type="text" className="h-10 outline-none rounded-xl px-2" />
       </label>
-      <label>
-        <span>Text</span>
-        <input type="text" />
+      <label className="flex flex-col">
+        <span className="text-gray-600">Text</span>
+        <input type="text" className="h-10 outline-none rounded-xl px-2" />
       </label>
-      <button type="submit">Submit</button>
+      <button
+        type="submit"
+        className="w-40 bg-rose-600 text-white rounded-2xl h-10 hover:bg-rose-700"
+      >
+        Submit
+      </button>
     </form>
   );
 };

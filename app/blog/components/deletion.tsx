@@ -1,13 +1,20 @@
 'use client';
 
-import { deleteBlogPost } from '@/app/(actions)/deleteBlogPost';
+import { deleteBlogPost } from '@/app/_actions/deleteBlogPost';
 
 const DeletionPost = ({ postId }: { postId: string }) => {
   const handleClick = async () => {
     await deleteBlogPost(postId);
   };
 
-  return <button onClick={handleClick}>Delete Post</button>;
+  return (
+    <button
+      onClick={handleClick}
+      className="w-40 bg-rose-600 text-white rounded-2xl h-10 hover:bg-rose-700"
+    >
+      Delete Post
+    </button>
+  );
 };
 
 export default DeletionPost;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { getBlogPost } from '@/app/(actions)/getBlogPost';
+import { getBlogPost } from '@/app/_actions/getBlogPost';
+import Comments from '../components/coments';
 import { logger } from '@/logger';
 
 const Post = async ({ params: { slug } }: { params: { slug: string } }) => {
@@ -8,10 +9,13 @@ const Post = async ({ params: { slug } }: { params: { slug: string } }) => {
   const post: BlogPost = await getBlogPost(slug);
 
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
-    </div>
+    <>
+      <div className="flex flex-col w-[800px] mb-10 text-gray-600 p-4">
+        <h1 className="text-4xl mb-3 font-semibold">{post.title}</h1>
+        <p className="text-2xl">{post.body}</p>
+      </div>
+      <Comments id={slug} />
+    </>
   );
 };
 

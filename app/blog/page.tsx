@@ -1,4 +1,4 @@
-import { getBlogList } from '@/app/(actions)/getBlogList';
+import { getBlogList } from '@/app/_actions/getBlogList';
 import Post from '@/app/blog/components/post';
 import { logger } from '@/logger';
 
