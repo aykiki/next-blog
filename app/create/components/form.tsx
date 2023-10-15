@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { createFormPost } from '@/app/(lib)/actions/createBlogPost';
+import { createFormPost } from '@/app/(actions)/createBlogPost';
 
 const Form = () => {
   const ref = useRef<HTMLFormElement | null>(null);

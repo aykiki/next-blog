@@ -1,4 +1,4 @@
-import { getBlogList } from '@/app/(lib)/actions/getBlogList';
+import { getBlogList } from '@/app/(actions)/getBlogList';
 import Post from '@/app/blog/components/post';
 
 const BlogList = async () => {

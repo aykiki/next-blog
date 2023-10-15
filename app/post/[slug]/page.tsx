@@ -1,5 +1,5 @@
 import React from 'react';
-import { getBlogPost } from '@/app/(lib)/actions/getBlogPost';
+import { getBlogPost } from '@/app/(actions)/getBlogPost';
 
 const Post = async ({ params: { slug } }: { params: { slug: string } }) => {
   const post: BlogPost = await getBlogPost(slug);
