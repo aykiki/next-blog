@@ -12,7 +12,8 @@
     "@rc-foundation/eslint-config-rc": "^0.0.25",
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "@types/node": "^20",

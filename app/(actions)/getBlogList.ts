@@ -1,4 +1,8 @@
+import { logger } from '@/logger';
+
 export const getBlogList = async () => {
+  logger.info('Server getBlogList called ');
+
   const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
     next: { revalidate: 60 },
   });

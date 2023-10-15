@@ -1,4 +1,8 @@
+import { logger } from '@/logger';
+
 export const getBlogPost = async (id: string) => {
+  logger.info('Server getBlogPost called ');
+
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
 
   if (!response.ok) {

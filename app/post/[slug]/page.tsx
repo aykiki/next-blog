@@ -1,7 +1,10 @@
 import React from 'react';
 import { getBlogPost } from '@/app/(actions)/getBlogPost';
+import { logger } from '@/logger';
 
 const Post = async ({ params: { slug } }: { params: { slug: string } }) => {
+  logger.info('Post page called ');
+
   const post: BlogPost = await getBlogPost(slug);
 
   return (

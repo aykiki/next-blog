@@ -1,8 +1,11 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
+import { logger } from '@/logger';
 
 export const createBlogPost = async (post: CreateBlogPost) => {
+  logger.info('Server createBlogPost called ');
+
   const response = await fetch('https://jsonplaceholder.typicode.com/posts/1', {
     method: 'PATCH',
     body: JSON.stringify(post),

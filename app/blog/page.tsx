@@ -1,7 +1,10 @@
 import { getBlogList } from '@/app/(actions)/getBlogList';
 import Post from '@/app/blog/components/post';
+import { logger } from '@/logger';
 
 const BlogList = async () => {
+  logger.info('BlogList page called ');
+
   const blogList: Array<BlogPost> = await getBlogList();
 
   return (
